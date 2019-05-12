@@ -12,21 +12,29 @@ function setPosts(result) {
   }
 }
 
+function toPromise1(f) {
+  return (option) => {
+    return new Promise((resolve, reject) => {
+      f(option, resolve)
+    })
+  }
+}
+
 function fetchUserAction(name) {
-  return dispatch => {
-    return fetchUser({
+  return async dispatch => {
+    return toPromise1(fetchUser)({
       name
-    }, (result) => {
+    }).then((result) => {
       return dispatch(setUser(result));
     })
   }
 }
 
 function fetchPostsByUserAction(userId) {
-  return dispatch => {
-    fetchPostsByUser({
+  return async dispatch => {
+    toPromise1(fetchPostsByUser)({
       userId
-    }, result => {
+    }).then(result => {
       return dispatch(setPosts(result));
     })
   }
