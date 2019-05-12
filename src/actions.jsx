@@ -21,7 +21,7 @@ function toPromise1(f) {
 }
 
 function fetchUserAction(name) {
-  return async dispatch => {
+  return dispatch => {
     return toPromise1(fetchUser)({
       name
     }).then((result) => {
@@ -31,7 +31,7 @@ function fetchUserAction(name) {
 }
 
 function fetchPostsByUserAction(userId) {
-  return async dispatch => {
+  return dispatch => {
     toPromise1(fetchPostsByUser)({
       userId
     }).then(result => {

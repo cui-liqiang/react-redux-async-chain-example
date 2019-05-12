@@ -7,9 +7,12 @@ class ContainerInner extends React.Component {
     };
   }
 
-  async fetchUserAndPost() {
-    await this.props.fetchUserAction(this.state.name)
-    await this.props.fetchPostsByUserAction(this.props.user.id)
+  fetchUserAndPost() {
+    const that = this;
+    co(function* () {
+      yield that.props.fetchUserAction(that.state.name)
+      that.props.fetchPostsByUserAction(that.props.user.id)
+    })
   }
 
   render() {
