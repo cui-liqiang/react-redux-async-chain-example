@@ -4,8 +4,8 @@
 
 ## 基础代码
 
-下载代码，切换到base分支。并在根目录中启动web server之后。访问http://localhost:8000/index.html，便可看到下面的图片：
-[](https://img.alicdn.com/tfs/TB1soqqVAvoK1RjSZFDXXXY3pXa-2782-1178.png)
+下载代码，切换到base分支。并在根目录中启动web server之后。访问http://localhost:8000/index.html ，便可看到下面的图片：
+![](https://img.alicdn.com/tfs/TB1soqqVAvoK1RjSZFDXXXY3pXa-2782-1178.png)
 
 其中左边是模拟的后台数据。后边是可以进行的操作。在这个分支上可以看到两个操作：
 1. 按照名字加载用户
