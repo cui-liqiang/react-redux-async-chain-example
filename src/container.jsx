@@ -7,6 +7,11 @@ class ContainerInner extends React.Component {
     };
   }
 
+  async fetchUserAndPost() {
+    await this.props.fetchUserAction(this.state.name)
+    await this.props.fetchPostsByUserAction(this.props.user.id)
+  }
+
   render() {
     return <div>
       <div className='dataContainerWrapper container'>
@@ -42,6 +47,9 @@ class ContainerInner extends React.Component {
       </div>
       <div className='formItem'>
         <input type='button' onClick={e => this.props.fetchPostsByUserAction(this.state.userID)} value="按用户ID加载Post" />
+      </div>
+      <div className='formItem'>
+        <input type='button' onClick={this.fetchUserAndPost.bind(this)} value="按用户名加载用户信息及Post" />
       </div>
     </div>
   </div>
