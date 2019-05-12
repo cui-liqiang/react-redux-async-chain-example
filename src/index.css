@@ -1,0 +1,42 @@
+.container {
+  float: left;
+  margin-right: 3%;
+  font-size: 12px
+}
+
+.dataContainerWrapper {
+  width: 50%
+}
+
+.displayContainer {
+  width: 30%
+}
+
+.manipulationContainer {
+  width: 10%
+}
+
+.userContainer, .postsContainer {
+  border: 1px solid;
+  margin-bottom: 10px;
+  padding: 5px
+}
+
+.postContainer{
+  margin-bottom: 5px;
+  padding: 5px
+}
+
+#username, #userId {
+  width: 80px
+}
+
+.formItem {
+  margin-bottom: 5px
+}
+
+.dataContainer {
+  height: 500px;
+  overflow: scroll;
+  border: 1px solid
+}
